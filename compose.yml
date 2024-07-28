@@ -1,0 +1,11 @@
+services:
+  webapp:
+    container_name: webapp
+    build: ./webapp
+    environment:
+      PORT: 5175
+    ports:
+     - 5175:5175
+    volumes:
+      - /webapp/node_modules
+      - ./webapp:/webapp
